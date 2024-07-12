@@ -1,0 +1,22 @@
+{
+  "name": "notas",
+  "version": "1.0.0",
+  "description": "Examen web cliente servidor tema notas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Node.js",
+    "Express"
+  ],
+  "author": "Laurens Calvo Trejos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
