@@ -1,11 +1,42 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>📁Home Notas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Home.css">
+
 </head>
 <body>
+    <div class="Menu">
+        <h1>📃Notas Agregadas📃</h1> 
+        <a href="/Notas/Home.html"> <button  class="Boton">Regresar Al Menu</button></a>
+
+        <div class="Menu">
+            <form action="/Notas/Notas_cre.html" method="post">
+                <label class="Formulario" for="ID_NOTA">ID NOTA</label>
+                <input type="number" id="ID_NOTA" ID_NOTA="ID_NOTA" required>
     
+                <label class="Formulario" for="TITULO">TITULO</label>
+                <input type="text" id="TITULO" TITULO="TITULO" required>
+    
+                <label class="Formulario" for="CONTENIDO">CONTENIDO</label>
+                <textarea id="CONTENIDO" name="CONTENIDO" required rows="3"></textarea>
+
+                <label class="Formulario" for="FECHA_HORA">FECHA Y HORA</label>
+                <input type="datetime-local"  name="" id=""  required>
+
+                <label class="Formulario" for="ETIQUETAS">ETIQUETAS</label>
+                <input type="text" id="ETIQUETAS" ETIQUETAS="ETIQUETAS" required>
+
+
+    
+                <button type="submit">AGREGAR</button>
+                <button type="reset">LIMPIAR</button>
+
+            </form>
+        </div>    
+   
+    </div>
 </body>
 </html>
