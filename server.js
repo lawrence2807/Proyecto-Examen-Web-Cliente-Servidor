@@ -14,35 +14,32 @@ app.get('/', (req, res) =>{
     res.sendFile(path.join(Notas, 'Home.html'));
 });
 
-app.get('/Notas/Home', (req, res) => {
+app.get('/Notas/Home.html', (req, res) => {
     console.log('Loading contactus us...');
-    res.sendFile(path.join(PUBLIC, '/Notas/Home.html'))
+    res.sendFile(path.join(Notas, '/Notas/Home.html'))
 
 })
 
-app.get('/Notas/Notas_cre', (req, res) =>{
-    res.sendFile(path.join(Notas, 'Notas_cre.html'));
-});
-
-app.get('/Notas/Notas_cre.html', (req, res) => {
+app.get('/Notas_cre', (req, res) => {
     console.log('Loading contactus us...');
-    res.sendFile(path.join(PUBLIC, '/Notas/Notas_cre.html'))
+    res.sendFile(path.join(Notas, 'Notas_cre.html'))
 
 })
 
-app.post('/Notas/Notas_cre', (req, res) => {
-    console.info('Contact Us has been called...\n');
-    const ID_NOTA = req.body.ID_NOTA;
-    const email = req.body.email;
-    const subject = req.body. subject;
+app.post('/Notas_cre', (req, res) => {
+    console.info('Formulario de agregar nota enviado...\n');
+    const { ID_NOTA, TITULO, CONTENIDO, FECHA_HORA, ETIQUETAS } = req.body;
 
-    console.log('Form data\n');
-    console.log('ID_NOTA: ' + ID_NOTA);
-    console.log('TITULO: ' + TITULO);
-    console.log('CONTENIDO: ' + CONTENIDO);
-    console.log('FECHA_HORA: ' + FECHA_HORA);
+    console.log('Datos del formulario recibidos:');
+    console.log('ID_NOTA:', ID_NOTA);
+    console.log('TITULO:', TITULO);
+    console.log('CONTENIDO:', CONTENIDO);
+    console.log('FECHA_HORA:', FECHA_HORA);
+    console.log('ETIQUETAS:', ETIQUETAS);
+    
     res.redirect('/');
 });
+
 
 
 app.listen(PORT, () => {
